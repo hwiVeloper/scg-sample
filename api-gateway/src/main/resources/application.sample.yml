@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id:
+          uri:
+          predicates:
+            -
+          filters:
+            -
+server:
+  port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "gateway"
+  endpoint:
+    gateway:
+      enabled: true
